@@ -1,4 +1,4 @@
-console.log('init')
+console.log('init links')
 
 /*document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed')

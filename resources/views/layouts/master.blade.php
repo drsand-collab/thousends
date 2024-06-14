@@ -8,11 +8,10 @@
         content="script-src
         https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js
         https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js
-       {{ asset('/assets/js/links.js') }}  "/>
-
-    {{--<meta
-        http-equiv="Content-Security-policy"
-        content="style-src 'self' https://fonts.googleapis.com https://apis.google.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; "/>--}}
+        https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js
+       {{ asset('/assets/js/links.js') }}
+       {{ asset('/assets/js/thousand.js') }}
+       "/>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -41,8 +40,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
             integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
             crossorigin="anonymous"></script>
-
-
 @show
 
 {{--@stack('scripts')--}}

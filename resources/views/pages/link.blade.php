@@ -8,10 +8,18 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <button class="btn btn-primary">Get email</button>
+                <a
+                    href="{{ route('api.link.generate', ['email'=>'admin@mail.com']) }}"
+                    class="btn btn-primary">
+                    Generate link
+                </a>
             </div>
             <div class="col">
-                <button class="btn btn-primary">Get encoded email</button>
+                <a
+                    href="{{ route('api.link.get', ['email'=>'YWRtaW5AbWFpbC5jb20=']) }}"
+                    class="btn btn-primary">
+                    Get decoded link
+                </a>
             </div>
         </div>
     </div>

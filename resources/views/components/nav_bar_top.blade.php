@@ -1,6 +1,6 @@
 <nav
-        class="navbar navbar-expand-lg nav_bar_component"
-        style="background-color: #024949;"
+    class="navbar navbar-expand-lg nav_bar_component"
+    style="background-color: #024949;"
 >
     <div class="container-fluid">
 
@@ -11,6 +11,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('links') }}">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('thousands') }}">Thousands</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
