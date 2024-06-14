@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\SimpleOperation;
-use Symfony\Component\HttpFoundation\Response;
 
 class ThousandOperationDataController extends Controller
 {
@@ -14,17 +13,15 @@ class ThousandOperationDataController extends Controller
     {
     }
 
-    public function index(): Response
+    public function index()
     {
         $start = \request()->has('start') ? \request('start') : 0;
 
-        $response = [
+        return [
             'start' => (int)$start,
             'offset' => (int)$this->simpleOperation->getChunk(),
             'count' => count($this->simpleOperation->getListData($start)),
             'data' => $this->simpleOperation->getListData($start)
         ];
-
-        return response()->json($response, 200);
     }
 }
